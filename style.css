@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', 'sans-serif';
+  box-sizing: border-box;
+}
+
+body {
+  background: blue;
+}
+
+.app {
+  margin: 50px auto 0;
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.app h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: darkred;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: white;
+  color: black;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+  background: blue;
+  color: white;
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+#next_btn {
+  background: blue;
+  color: rgb(80, 17, 17);
+  font-weight: 400;
+  font-size: 1rem;
+  width: 150px;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 15px auto 0;
+  cursor: pointer;
+  display: none;
+  float: right;
+}
+
+.correct {
+  background: green;
+}
+
+.incorrect {
+  background: red;
+}
+
+#progress-bar {
+  transition: width 1s linear;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.start-btn {
+  background-color: darkred;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 50px auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #a30000;
+}
+
+/* Hide progress bar when score is shown */
+.hide-progress #progress-container {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .app {
+    width: 95%;
+    padding: 15px;
+    margin: 30px auto 0;
+  }
+
+  .app h1 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  #next_btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    margin: 20px 0 0;
+    float: none;
+    display: block; /* ensure visible for small screens */
+  }
+
+  .start-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 40px auto;
+  }
+
+  #question-count {
+    position: fixed; /* Keeps it stuck to the top corner */
+    top: 10px; /* Distance from top */
+    right: 10px; /* Adjusted closer for smaller screens */
+    font-weight: bold;
+    font-size: 16px;
+    color: #ec4d4d;
+    z-index: 1000; /* Keeps it above all other elements */
+    background: rgba(255,255,255,0.9);
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+
+  #progress-container {
+    height: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
+}
